@@ -3,7 +3,7 @@ import SupportAgentOutlinedIcon from "@mui/icons-material/SupportAgentOutlined";
 
 function Support({ isClicked, setIsClicked }) {
   return (
-    <div className="flex items-center transition delay-150 duration-700 ease-in-out"> 
+    <div className="flex items-center "> 
       <button
         className="btn btn-lg btn-ghost  flex items-center m-5 fixed bottom-0 right-0"
         onClick={() => {

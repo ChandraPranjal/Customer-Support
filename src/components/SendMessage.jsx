@@ -26,7 +26,7 @@ function SendMessage({ messages, setMessages }) {
     }}
   return (
     <div
-      className="bg-base-200 p-2 mt-2 flex items-center justify-center w-full shadow-2xl shadow-zinc-50 h-[13%]"
+      className="bg-base-200 p-2 mt-2 flex items-center justify-center w-full h-[13%]"
 
     >
       <textarea

@@ -3,7 +3,6 @@ import React, { useState } from "react";
 function SendMessage({ messages, setMessages }) {
   const [value, setValue] = useState("");
 
-
   const changeHandler = (e) => {
     setValue(e.target.value);
     const textarea = e.target;
@@ -13,22 +12,21 @@ function SendMessage({ messages, setMessages }) {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!value.trim().length) return;
     console.log(value);
     const obj = { id: 1, text: value, name: "Bot" };
-    setMessages( [...messages, obj]);
+    setMessages([...messages, obj]);
   };
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault(); // Prevents inserting new line
       const obj = { id: 1, text: value, name: "Bot" };
-      setMessages( [...messages, obj]);
-    }}
+      setMessages([...messages, obj]);
+    }
+  };
   return (
-    <div
-      className="bg-base-200 p-2 mt-2 flex items-center justify-center w-full h-[13%]"
-
-    >
+    <div className="bg-base-200 p-2 mt-2 flex items-center justify-center w-full h-[13%]">
       <textarea
         value={value}
         onInput={changeHandler}

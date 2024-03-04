@@ -69,7 +69,7 @@ function ChatBox() {
   return (
     <div>
       {isClicked ? (
-        <div className="fixed bottom-0 right-0 m-5 w-4/6 h-3/5 md:w-2/6 md:h-5/6 rounded-t-2xl  flex flex-col  shadow-lg shadow-cyan-400 text-sm">
+        <div className="fixed bottom-0 right-0 m-5 w-4/6 h-3/5 md:w-2/6 md:h-5/6 rounded-t-2xl  flex flex-col  shadow-lg shadow-cyan-400 text-sm  sm:text-base">
           <div className=" bg-sky-900  h-[11%] rounded-t-2xl p-5 text-center flex items-center justify-between">
             <p>My Chat</p>
             <button className="btn btn-sm md:btn-md glass" onClick={() => {

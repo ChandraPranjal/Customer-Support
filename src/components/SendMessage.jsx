@@ -34,7 +34,7 @@ function SendMessage({ messages, setMessages }) {
         value={value}
         onInput={changeHandler}
         onKeyDown={handleKeyDown}
-        className="input placeholder:text-sm flex rounded-xl  overflow-auto max-h-[90%]  p-1 resize-none w-4/5"
+        className="input placeholder:text-sm placeholder:sm:text-base placeholder:p-0.5 flex rounded-xl  overflow-auto max-h-[90%]  p-1 resize-none w-4/5"
         placeholder="How may I help you?"
       ></textarea>
       <button className="btn btn-ghost m-2 p-1 b-0" onClick={handleSubmit}>

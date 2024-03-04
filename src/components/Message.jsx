@@ -13,7 +13,7 @@ function Message({ message}) {
           />
         </div>
       </div>
-      <div className="chat-bubble">{message.text}</div>
+      <div className="chat-bubble break-words ">{message.text}</div>
     </div>
   );
 }

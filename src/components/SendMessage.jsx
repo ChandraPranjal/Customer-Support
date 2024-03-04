@@ -13,16 +13,19 @@ function SendMessage({ messages, setMessages }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!value.trim().length) return;
-    console.log(value);
+    // console.log(value);
     const obj = { id: 1, text: value, name: "Bot" };
     setMessages([...messages, obj]);
+    setValue("");
   };
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault(); // Prevents inserting new line
+      if (!value.trim().length) return;
       const obj = { id: 1, text: value, name: "Bot" };
       setMessages([...messages, obj]);
+      setValue("");
     }
   };
   return (
@@ -31,8 +34,8 @@ function SendMessage({ messages, setMessages }) {
         value={value}
         onInput={changeHandler}
         onKeyDown={handleKeyDown}
-        className="input flex rounded-xl  overflow-hidden p-1 resize-none w-4/5"
-        placeholder="Share your mood with me, and I'll curate the movie recommendations for you! 🍿✨"
+        className="input placeholder:text-sm flex rounded-xl  overflow-auto max-h-[90%]  p-1 resize-none w-4/5"
+        placeholder="How may I help you?"
       ></textarea>
       <button className="btn btn-ghost m-2 p-1 b-0" onClick={handleSubmit}>
         Send

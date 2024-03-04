@@ -3,9 +3,9 @@ import SupportAgentOutlinedIcon from "@mui/icons-material/SupportAgentOutlined";
 
 function Support({ isClicked, setIsClicked }) {
   return (
-    <div className="flex items-center "> 
+    <div className="fixed bottom-0 right-0 flex items-center"> 
       <button
-        className="btn btn-lg btn-ghost  flex items-center m-5 fixed bottom-0 right-0"
+        className="btn btn-lg btn-ghost  flex items-center m-4 fixed bottom-0 right-0"
         onClick={() => {
           setIsClicked(!isClicked);
         }}

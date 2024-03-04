@@ -79,7 +79,7 @@ function ChatBox() {
             </button>
           </div>
           <div
-            className="backdrop-blur-sm overflow-y-auto h-[76%] "
+            className="backdrop-blur-sm overflow-y-auto h-[76%] mx-2"
             // style={{ height: "calc(100% - 4rem" }}
           >
             {messages.map((message) => (
